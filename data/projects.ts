@@ -1,0 +1,68 @@
+import type { Project } from "@/types";
+
+export const projects: Project[] = [
+  {
+    title: "Devizes",
+    slug: "the-alabaster-villa",
+    folder: "globalview/2",
+    category: "Bathroom renovation",
+    location: "Devizes",
+    year: "2024",
+  },
+  {
+    title: "Devizes",
+    slug: "ethereal-gardens",
+    folder: "globalview/3",
+    category: "Bathroom renovation",
+    location: "Devizes",
+    year: "2023",
+  },
+  {
+    title: "Swindon",
+    slug: "lumina-pavilion",
+    folder: "globalview/4",
+    category: "Bathroom renovation",
+    location: "Swindon",
+    year: "2024",
+  },
+  {
+    title: "West Lavington",
+    slug: "horizon-tower",
+    folder: "globalview/5",
+    category: "Bathroom renovation",
+    location: "West Lavington",
+    year: "2023",
+  },
+  {
+    title: "Calne",
+    slug: "meridian-complex",
+    folder: "globalview/6",
+    category: "Kitchen renovation",
+    location: "Calne",
+    year: "2024",
+  },
+  {
+    title: "Devizes",
+    slug: "the-glass-atrium",
+    folder: "globalview/7",
+    category: "Bathroom renovation",
+    location: "Devizes",
+    year: "2023",
+  },
+  {
+    title: "Swindon",
+    slug: "solaris-residence",
+    folder: "globalview/8",
+    category: "Bathroom renovation",
+    location: "Swindon",
+    year: "2024",
+  },
+  {
+    title: "Bathford",
+    slug: "prism-arts-center",
+    folder: "globalview/9",
+    category: "Bathroom renovation",
+    location: "Bathford",
+    year: "2024",
+  },
+];
