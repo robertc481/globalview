@@ -62,12 +62,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
       <body className="font-sans">
-        <a
-          href="#main-content"
-          className="fixed left-2 top-2 z-[999] -translate-y-full rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white transition-transform focus:translate-y-0"
-        >
-          Skip to main content
-        </a>
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

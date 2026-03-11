@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
+const philosophy = [
   {
     number: "01",
     category: "Innovation",
@@ -37,6 +37,10 @@ const services = [
       "We guarantee professional and easy communication during and after the completion of the renovation.",
   },
 ];
+
+const services = ["House extension", "Home renovation", "Loft conversions", "Plumbing and heating", "Electrics and wiring", "Kitchen installation", "Bathroom installation", "Painting and decorating services", "Plastering and rendering", "Groundworks", "Garden landscaping"]
+
+const locations = ["Wiltshire", "Somerset", "Gloucestershire", "Berkshire", "Hampshire"];
 
 export default function AboutPage() {
   return (
@@ -77,8 +81,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+       {/* Services */}
+       <section aria-label="Locations of services" className="section-padding bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <span className="section-label">Our services</span>
+          <h2 className="heading-section mt-4">We specialise in:</h2>
+          <ul className="mt-8 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <li key={service} className="flex items-center gap-2 text-base font-medium text-slate-900">
+                <span className="text-slate-900">&bull;</span>
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section aria-label="Locations of services" className="section-padding">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <span className="section-label">Our Locations</span>
+          <h2 className="heading-section mt-4">We do operate in the following areas:</h2>
+          <ul className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
+            {locations.map((location) => (
+              <li key={location} className="flex items-center gap-2 text-base font-medium text-slate-900">
+                <span className="text-slate-900">&bull;</span>
+                {location}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Map */}
-      <section aria-label="Location map" className="pb-10">
+      <section aria-label="Location map" className="pb-10 bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <span className="section-label">Our Location</span>
           <h2 className="heading-section mt-4">Find Us</h2>
@@ -100,27 +136,27 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Our Philosophy */}
       <section aria-label="Our services" className="section-padding bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-3 md:gap-8">
-            {services.map((service) => (
+            {philosophy.map((philosophy) => (
               <article
-                key={service.number}
+                key={philosophy.number}
                 className="border-t border-slate-200 pt-8"
               >
                 <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <span className="font-semibold">{service.number}</span>
+                  <span className="font-semibold">{philosophy.number}</span>
                   <span>/</span>
                   <span className="uppercase tracking-wider">
-                    {service.category}
+                    {philosophy.category}
                   </span>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-slate-900">
-                  {service.title}
+                  {philosophy.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-500">
-                  {service.description}
+                  {philosophy.description}
                 </p>
               </article>
             ))}

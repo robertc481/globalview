@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -46,44 +47,14 @@ export default function Header() {
             className="relative block"
             aria-label="Global View — Home"
           >
-            <svg
-              width="220"
-              height="70"
-              viewBox="0 0 220 70"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-auto lg:h-12"
-              aria-label="Global View Construction"
-            >
-              <path
-                d="M70 18 L110 6 L150 18"
-                stroke="#111111"
-                strokeWidth={2}
-                fill="none"
-              />
-              <text
-                x="110"
-                y="40"
-                fontFamily="'Segoe UI', Helvetica, Arial, sans-serif"
-                fontSize="36"
-                fontWeight="700"
-                letterSpacing="2"
-                fill="#111111"
-                textAnchor="middle"
-              >
-                GV
-              </text>
-              <text
-                x="110"
-                y="58"
-                fontFamily="'Segoe UI', Helvetica, Arial, sans-serif"
-                fontSize="12"
-                letterSpacing="3"
-                fill="#555555"
-                textAnchor="middle"
-              >
-                CONSTRUCTION
-              </text>
-            </svg>
+            <Image
+              src="/gvlogo.svg"
+              alt="Global View Construction"
+              width={220}
+              height={70}
+              className="h-12 w-auto lg:h-20"
+              priority
+            />
           </Link>
 
           <ul className="hidden items-center gap-8 md:flex" role="list">
